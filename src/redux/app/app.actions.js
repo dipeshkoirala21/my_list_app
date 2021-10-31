@@ -9,3 +9,8 @@ export const setToken = token => ({
   type: types.SET_TOKEN,
   payload: token,
 });
+
+export const logout = payload => ({
+  type: types.CLEAR_TOKEN,
+  payload,
+});

@@ -7,4 +7,5 @@ export const api = axios.create({
   timeout: 10000,
 });
 
-export const searchRepo = data => api.post('search/repositories', data);
+export const searchRepo = (query, page) =>
+  api.get(`search/repositories?q=${query}&per_page=8&page=${page}`);

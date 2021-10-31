@@ -7,6 +7,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Login from './screens/LoginScreen/index';
 import List from './screens/ListScreen/index';
 import Details from './screens/RepoDetailsComponent/index';
+import {Colors} from './global/constants/index';
 
 const Stack = createStackNavigator();
 
@@ -32,7 +33,17 @@ function AppStack() {
       <Stack.Screen
         name="Details"
         component={Details}
-        options={{headerShown: false}}
+        options={{
+          headerShown: true,
+          title: 'Details',
+          headerTitleStyle: {
+            color: Colors.lightgray,
+          },
+          headerStyle: {
+            backgroundColor: Colors.dark,
+          },
+          headerTintColor: Colors.lightgray,
+        }}
       />
     </Stack.Navigator>
   );
